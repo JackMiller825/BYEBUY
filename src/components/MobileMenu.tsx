@@ -74,6 +74,7 @@ export function MobileMenu({ activeId }: MobileMenuProps) {
           label={`Buy ${siteConfig.ticker}`}
           href={buyHref}
           pendingMessage={siteConfig.messages.linkPending}
+          track="buy"
         />
       </div>
     </div>

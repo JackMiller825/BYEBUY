@@ -75,12 +75,14 @@ export function BuySteps() {
             label="Open official buy link"
             href={buyHref}
             pendingMessage=""
+            track="buy"
           />
           <DestinationControl
             label="View chart"
             href={chart}
             pendingMessage=""
             variant="secondary"
+            track="chart"
           />
         </div>
       </div>

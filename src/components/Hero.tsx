@@ -29,12 +29,14 @@ export function Hero() {
               label={`Buy ${siteConfig.ticker}`}
               href={buyHref}
               pendingMessage={siteConfig.messages.linkPending}
+              track="buy"
             />
             <DestinationControl
               label="View chart"
               href={chart}
               pendingMessage={siteConfig.messages.chartPending}
               variant="secondary"
+              track="chart"
             />
           </div>
         </div>

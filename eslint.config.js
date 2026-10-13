@@ -16,6 +16,7 @@ export default tseslint.config(
       "specs",
       "content",
       "public",
+      "data",
     ],
   },
   {
@@ -35,6 +36,12 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
+    },
+  },
+  {
+    files: ["server/**/*.ts", "scripts/**/*.ts"],
+    languageOptions: {
+      globals: globals.node,
     },
   },
 );

@@ -41,6 +41,7 @@ export function SiteHeader({ activeId }: SiteHeaderProps) {
             label={`Buy ${siteConfig.ticker}`}
             href={buyHref}
             pendingMessage={siteConfig.messages.linkPending}
+            track="buy"
           />
         </div>
         <MobileMenu activeId={activeId} />

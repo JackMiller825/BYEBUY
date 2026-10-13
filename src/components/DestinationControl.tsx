@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { trackCta, type Cta } from "../analytics/tracker";
 
 type DestinationControlProps = {
   label: string;
@@ -9,6 +10,7 @@ type DestinationControlProps = {
   noteId?: string;
   describedBy?: string;
   icon?: ReactNode;
+  track?: Cta;
 };
 
 export function DestinationControl({
@@ -20,6 +22,7 @@ export function DestinationControl({
   noteId,
   describedBy,
   icon,
+  track,
 }: DestinationControlProps) {
   if (href) {
     return (
@@ -28,6 +31,9 @@ export function DestinationControl({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => {
+          if (track) trackCta(track);
+        }}
       >
         {icon}
         <span>{label}</span>

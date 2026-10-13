@@ -1,3 +1,4 @@
+import { trackCta } from "../analytics/tracker";
 import { assets, navItems, siteConfig } from "../config/siteConfig";
 import { telegramHref, xHref } from "../config/destinations";
 
@@ -37,13 +38,23 @@ export function SiteFooter() {
         </nav>
         <div className="footer-social">
           {xUrl ? (
-            <a href={xUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={xUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackCta("x")}
+            >
               <img src={assets.xIcon} alt="" width={128} height={128} />
               <span className="sr-only">Follow on X (opens in a new tab)</span>
             </a>
           ) : null}
           {telegram ? (
-            <a href={telegram} target="_blank" rel="noopener noreferrer">
+            <a
+              href={telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackCta("telegram")}
+            >
               <img
                 src={assets.telegramIcon}
                 alt=""

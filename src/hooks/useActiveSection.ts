@@ -43,5 +43,9 @@ export function useActiveSection(): SectionId {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent("byebuy-section", { detail: activeId }));
+  }, [activeId]);
+
   return activeId;
 }

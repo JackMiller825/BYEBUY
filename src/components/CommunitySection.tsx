@@ -49,6 +49,7 @@ export function CommunitySection() {
             pendingMessage={siteConfig.messages.linkPending}
             showNote={!telegram}
             noteId="telegram-note"
+            track="telegram"
             icon={
               <img
                 src={assets.telegramIcon}
@@ -65,6 +66,7 @@ export function CommunitySection() {
             variant="secondary"
             showNote={!xUrl}
             noteId="x-note"
+            track="x"
             icon={
               <img src={assets.xIcon} alt="" width={128} height={128} />
             }

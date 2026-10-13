@@ -1,6 +1,10 @@
 # Bye Buy / $BYEBUY
 
-The production site is a Vite + React + TypeScript app in this repository. Project facts and external links live only in `src/config/siteConfig.ts`. Contract, tokenomics, buy, chart, X, Telegram, and contact are empty until confirmed, and the page shows a pending state for each one.
+The production site is a Vite + React + TypeScript app in this repository. Project facts and external links live only in `src/config/siteConfig.ts`.
+
+Visitor counts run through a separate Node server. GitHub Pages only serves the static site. The private dashboard is at `/dashboard` and refreshes every 10 seconds. On https://byebuy.online it calls `https://byebuy.103.161.35.238.sslip.io`. Local development uses the same origin. People who send Do Not Track or Global Privacy Control are not recorded.
+
+`DASHBOARD_PASSWORD` is read once by `npm run setup`, stored as a hash in `data/analytics.sqlite`, and is not committed. `data/` stays on the server.
 
 ```bash
 npm install

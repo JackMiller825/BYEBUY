@@ -1,0 +1,8 @@
+Final token name: Bye Buy
+Ticker: $BYEBUY
+Narrative: A fictional lavender whale waves goodbye while secretly selling, pockets its ETH suitcase, and leaves a falling chart behind. The name sounds like “bye-bye” while the ticker and hidden SELL action add the trading joke.
+Network: Ethereum mainnet (project intent; token contract address not supplied).
+Contract: [CONTRACT_ADDRESS]
+Tokenomics: [TOKENOMICS]
+Official X: [OFFICIAL_X_URL]
+Official Telegram: [OFFICIAL_TELEGRAM_URL]

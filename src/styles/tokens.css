@@ -1,0 +1,25 @@
+﻿:root {
+  --ink: #24132f;
+  --ink-soft: #4e3d5c;
+  --lavender: #aa87e8;
+  --lavender-dark: #7352b5;
+  --cream: #fff5e4;
+  --cream-deep: #fff8ef;
+  --coral-text: #9f2d2a;
+  --gold: #ffc84d;
+  --ocean: #21143a;
+  --ocean-mid: #30204f;
+  --card: #fffaf3;
+  --header-height: 5rem;
+  --content: 1160px;
+  --font-display: "Fredoka", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --shadow: 0 14px 36px rgba(36, 19, 47, 0.08);
+  --radius: 22px;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+

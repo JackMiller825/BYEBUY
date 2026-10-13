@@ -1,0 +1,48 @@
+relative_path,category,purpose,page_or_section,dimensions_px_or_viewbox,format,transparency,approval_version_status
+branding/byebuy-character-cutout.png,branding,Character cutout,branding,1254x1254,png,yes,approved/reused
+branding/byebuy-logo-transparent.png,branding,Logo transparent,branding,1024x1024,png,yes,approved/reused
+branding/byebuy-mascot-approved-concept-v1.png,branding,Mascot approved concept v1,branding,1254x1254,png,no,approved/reused
+branding/byebuy-selected-concept-reference-v1.png,branding,Selected concept reference v1,branding,1254x1254,png,no,approved/reused
+previews/01-byebuy-home-overview-desktop.png,preview,Design mockup; 01 home overview desktop,previews,1440x4790,png,no,mockup
+previews/02-byebuy-home-hero-desktop.png,preview,Design mockup; 02 home hero desktop,previews,1440x710,png,no,mockup
+previews/03-byebuy-home-story-desktop.png,preview,Design mockup; 03 home story desktop,previews,1440x900,png,no,mockup
+previews/04-byebuy-home-tokenomics-desktop.png,preview,Design mockup; 04 home tokenomics desktop,previews,1440x660,png,no,mockup
+previews/05-byebuy-home-how-to-buy-desktop.png,preview,Design mockup; 05 home how to buy desktop,previews,1440x760,png,no,mockup
+previews/06-byebuy-home-community-desktop.png,preview,Design mockup; 06 home community desktop,previews,1440x900,png,no,mockup
+previews/07-byebuy-home-faq-desktop.png,preview,Design mockup; 07 home faq desktop,previews,1440x900,png,no,mockup
+previews/08-byebuy-home-footer-and-header-desktop.png,preview,Design mockup; 08 home footer and header desktop,previews,1440x850,png,no,mockup
+previews/09-byebuy-home-overview-mobile.png,preview,Design mockup; 09 home overview mobile,previews,430x5740,png,no,mockup
+previews/10-byebuy-home-story-mobile.png,preview,Design mockup; 10 home story mobile,previews,430x900,png,no,mockup
+previews/11-byebuy-home-tokenomics-how-to-buy-mobile.png,preview,Design mockup; 11 home tokenomics how to buy mobile,previews,430x2000,png,no,mockup
+previews/12-byebuy-header-mobile-menu-open.png,preview,Design mockup; 12 header mobile menu open,previews,430x930,png,no,mockup
+previews/13-byebuy-story-mask-interaction.png,preview,Design mockup; 13 story mask interaction,previews,1440x900,png,no,mockup
+previews/14-byebuy-community-meme-lab-state.png,preview,Design mockup; 14 community meme lab state,previews,1440x900,png,no,mockup
+social/byebuy-banner-1100x520.png,social,Banner 1100x520,social,1100x520,png,no,approved/reused
+social/byebuy-banner-3to1.png,social,Banner 3to1,social,1500x500,png,no,approved/reused
+social/byebuy-social-share-1200x630.png,social,Social share 1200x630,social,1200x630,png,no,reconstructed/new
+specs/previews-contact-sheet.png,website,Previews contact sheet,specs,1140x1500,png,no,reconstructed/new
+website/community/byebuy-community-background.svg,website,Community background,community,1920x900,svg,no,reconstructed/new
+website/community/byebuy-community-character.png,website,Community character,community,1254x1254,png,yes,reconstructed/new
+website/community/byebuy-community-crew.svg,website,Community crew,community,900x420,svg,yes,reconstructed/new
+website/community/byebuy-community-telegram.svg,website,Community telegram,community,128x128,svg,yes,reconstructed/new
+website/community/byebuy-community-x.svg,website,Community x,community,128x128,svg,yes,reconstructed/new
+website/footer/byebuy-footer-logo.png,website,Footer logo,footer,1024x1024,png,yes,reconstructed/new
+website/footer/byebuy-footer-wave-divider.svg,website,Footer wave divider,footer,1920x220,svg,yes,reconstructed/new
+website/home/byebuy-home-background.svg,website,Home background,home,1920x1000,svg,no,reconstructed/new
+website/home/byebuy-home-character.png,website,Home character,home,1254x1254,png,yes,reconstructed/new
+website/home/byebuy-home-logo.png,website,Home logo,home,1024x1024,png,yes,reconstructed/new
+website/how-to-buy/byebuy-how-to-buy-background.svg,website,How to buy background,how-to-buy,1920x900,svg,no,reconstructed/new
+website/how-to-buy/byebuy-how-to-buy-eth.svg,website,How to buy eth,how-to-buy,160x200,svg,yes,reconstructed/new
+website/how-to-buy/byebuy-how-to-buy-swap.svg,website,How to buy swap,how-to-buy,200x170,svg,yes,reconstructed/new
+website/how-to-buy/byebuy-how-to-buy-wallet.svg,website,How to buy wallet,how-to-buy,200x160,svg,yes,reconstructed/new
+website/icons/favicon-16.png,website,Favicon 16,icons,16x16,png,yes,reconstructed/new
+website/icons/favicon-180.png,website,Favicon 180,icons,180x180,png,yes,reconstructed/new
+website/icons/favicon-192.png,website,Favicon 192,icons,192x192,png,yes,reconstructed/new
+website/icons/favicon-32.png,website,Favicon 32,icons,32x32,png,yes,reconstructed/new
+website/icons/favicon-48.png,website,Favicon 48,icons,48x48,png,yes,reconstructed/new
+website/icons/favicon-512.png,website,Favicon 512,icons,512x512,png,yes,reconstructed/new
+website/icons/favicon.svg,website,Favicon,icons,viewBox-defined,svg,yes,reconstructed/new
+website/story/byebuy-story-background.svg,website,Story background,story,1920x900,svg,no,reconstructed/new
+website/story/byebuy-story-character.png,website,Story character,story,1254x1254,png,yes,reconstructed/new
+website/tokenomics/byebuy-tokenomics-background.svg,website,Tokenomics background,tokenomics,1920x900,svg,no,reconstructed/new
+website/tokenomics/byebuy-tokenomics-eth-mark.svg,website,Tokenomics eth mark,tokenomics,160x200,svg,yes,reconstructed/new

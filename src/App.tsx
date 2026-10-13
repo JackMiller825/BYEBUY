@@ -1,6 +1,5 @@
 import { CommunitySection } from "./components/CommunitySection";
 import { BuySteps } from "./components/BuySteps";
-import { FaqList } from "./components/FaqList";
 import { Hero } from "./components/Hero";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
@@ -23,7 +22,6 @@ export default function App() {
         <TokenFacts />
         <BuySteps />
         <CommunitySection />
-        <FaqList />
       </main>
       <SiteFooter />
     </>

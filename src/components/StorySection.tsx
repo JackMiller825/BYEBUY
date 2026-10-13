@@ -35,9 +35,7 @@ export function StorySection() {
         />
         <p className="story-note">
           That is the whole Bye Buy joke: “bye-bye” sounds like a sweet goodbye,
-          while “buy” sits beside the whale’s very different plan. It is
-          fictional meme lore, not a claim about any real person or project
-          team.
+          while “buy” sits beside the whale’s very different plan.
         </p>
         <div className="story-grid">
           <ol className="beat-list">
@@ -84,9 +82,6 @@ export function StorySection() {
           >
             {revealed ? "Hide the other side" : "Show the other side"}
           </button>
-          <p className="static-caption">
-            The wave says “bye-bye.” The other fin says SELL.
-          </p>
         </div>
       </div>
     </section>

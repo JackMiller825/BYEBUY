@@ -4,10 +4,7 @@
  * pending states. Do not add guessed addresses, supply figures, or unofficial links.
  *
  * Still awaiting confirmation:
- * - contractAddress
- * - tokenomics
- * - officialXUrl
- * - officialTelegramUrl
+ * - contractAddress (shown as "Coming Soon.." until a real address is set)
  * - dexLink
  * - chartLink
  * - projectContact
@@ -25,9 +22,14 @@ export const siteConfig = {
   siteUrl: "https://byebuy.online",
   year: 2026,
   contractAddress: "",
+  contractPlaceholder: "Coming Soon..",
+  totalSupply: "1,000,000,000",
+  buySellTax: "0%",
+  liquidityStatus: "Burn",
+  ownership: "Renounce",
   tokenomics: "",
-  officialXUrl: "",
-  officialTelegramUrl: "",
+  officialXUrl: "https://x.com/selfish9891",
+  officialTelegramUrl: "https://t.me/selfish9891",
   dexLink: "",
   chartLink: "",
   projectContact: "",
@@ -46,7 +48,6 @@ export const navItems = [
   { id: "tokenomics", label: "Tokenomics" },
   { id: "how-to-buy", label: "How to Buy" },
   { id: "community", label: "Community" },
-  { id: "faq", label: "FAQ" },
 ] as const;
 
 export type SectionId = (typeof navItems)[number]["id"];

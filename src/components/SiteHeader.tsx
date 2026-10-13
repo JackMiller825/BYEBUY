@@ -41,7 +41,6 @@ export function SiteHeader({ activeId }: SiteHeaderProps) {
             label={`Buy ${siteConfig.ticker}`}
             href={buyHref}
             pendingMessage={siteConfig.messages.linkPending}
-            describedBy={buyHref ? undefined : "hero-buy-note"}
           />
         </div>
         <MobileMenu activeId={activeId} />

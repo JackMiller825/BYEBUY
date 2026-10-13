@@ -3,9 +3,16 @@ import { assets, siteConfig } from "../config/siteConfig";
 import { contractAddress } from "../config/destinations";
 import { SectionHeading } from "./SectionHeading";
 
+const facts = [
+  { label: "Total supply", value: siteConfig.totalSupply },
+  { label: "Buy / sell tax", value: siteConfig.buySellTax },
+  { label: "Liquidity status", value: siteConfig.liquidityStatus },
+  { label: "Ownership", value: siteConfig.ownership },
+];
+
 export function TokenFacts() {
-  const address = contractAddress();
-  const tokenomics = siteConfig.tokenomics.trim();
+  const publishedAddress = contractAddress();
+  const displayAddress = publishedAddress ?? siteConfig.contractPlaceholder;
   const [copyState, setCopyState] = useState<"idle" | "success" | "error">(
     "idle",
   );
@@ -13,15 +20,24 @@ export function TokenFacts() {
   const manualId = useId();
 
   async function copyAddress() {
-    if (!address) return;
     try {
-      if (!navigator.clipboard?.writeText) {
-        throw new Error("Clipboard API is unavailable.");
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(displayAddress);
+        setCopyState("success");
+        return;
       }
-      await navigator.clipboard.writeText(address);
-      setCopyState("success");
+      throw new Error("Clipboard API is unavailable.");
     } catch {
-      setCopyState("error");
+      const field = document.createElement("textarea");
+      field.value = displayAddress;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.left = "-9999px";
+      document.body.appendChild(field);
+      field.select();
+      const copied = document.execCommand("copy");
+      field.remove();
+      setCopyState(copied ? "success" : "error");
     }
   }
 
@@ -49,60 +65,42 @@ export function TokenFacts() {
           />
         </div>
         <dl className="fact-grid">
-          <div className="fact-card">
-            <dt>Network</dt>
-            <dd>Ethereum</dd>
-            <p className="fact-hint">Project intent. Deployment is not confirmed.</p>
-          </div>
-          <div className="fact-card">
-            <dt>Ticker</dt>
-            <dd>{siteConfig.ticker}</dd>
-          </div>
-          <div className="fact-card">
-            <dt>Contract address</dt>
-            <dd>{address ?? siteConfig.messages.contractPending}</dd>
-          </div>
-          <div className="fact-card">
-            <dt>Tokenomics</dt>
-            <dd>
-              {tokenomics || siteConfig.messages.tokenomicsPending}
-            </dd>
-          </div>
+          {facts.map((fact) => (
+            <div key={fact.label} className="fact-card">
+              <dt>{fact.label}</dt>
+              <dd>{fact.value}</dd>
+            </div>
+          ))}
         </dl>
         <div className="contract-tools">
+          <p className="contract-label">Contract address</p>
+          <p className="contract-value">{displayAddress}</p>
           <button
             type="button"
             className="btn btn-primary"
             onClick={copyAddress}
-            disabled={!address}
             aria-describedby={statusId}
           >
             Copy contract address
           </button>
           <p id={statusId} className="copy-status" aria-live="polite">
-            {!address
-              ? siteConfig.messages.contractPending
-              : copyState === "success"
-                ? "Contract copied"
-                : copyState === "error"
-                  ? "Copy failed — select and copy the address manually."
-                  : ""}
+            {copyState === "success"
+              ? "Contract copied"
+              : copyState === "error"
+                ? "Copy failed — select and copy the address manually."
+                : ""}
           </p>
-          {address && copyState === "error" ? (
+          {copyState === "error" ? (
             <label className="manual-copy" htmlFor={manualId}>
               Contract address
               <input
                 id={manualId}
                 readOnly
-                value={address}
+                value={displayAddress}
                 onFocus={(event) => event.currentTarget.select()}
               />
             </label>
           ) : null}
-          <p className="helper">
-            Always verify the contract address on an independent Ethereum
-            explorer. A token name or ticker alone does not identify a token.
-          </p>
         </div>
       </div>
     </section>

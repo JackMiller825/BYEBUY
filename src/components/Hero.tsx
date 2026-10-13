@@ -24,26 +24,19 @@ export function Hero() {
             with the ETH. Meet Bye Buy: the token joke where the farewell is
             friendly and the exit is suspicious.
           </p>
-          <div className="action-row">
+          <div className="hero-actions">
             <DestinationControl
               label={`Buy ${siteConfig.ticker}`}
               href={buyHref}
               pendingMessage={siteConfig.messages.linkPending}
-              showNote={!buyHref}
-              noteId="hero-buy-note"
             />
             <DestinationControl
               label="View chart"
               href={chart}
               pendingMessage={siteConfig.messages.chartPending}
               variant="secondary"
-              showNote={!chart}
-              noteId="hero-chart-note"
             />
           </div>
-          <p className="trust-line">
-            Ethereum token • Verify the contract before swapping
-          </p>
         </div>
         <div className="hero-art">
           <img

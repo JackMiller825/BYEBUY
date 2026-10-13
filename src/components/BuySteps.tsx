@@ -1,9 +1,5 @@
-import { assets, siteConfig } from "../config/siteConfig";
-import {
-  chartHref,
-  contractAddress,
-  dexHref,
-} from "../config/destinations";
+import { assets } from "../config/siteConfig";
+import { chartHref, dexHref } from "../config/destinations";
 import { DestinationControl } from "./DestinationControl";
 import { SectionHeading } from "./SectionHeading";
 
@@ -27,7 +23,6 @@ const steps = [
 export function BuySteps() {
   const buyHref = dexHref();
   const chart = chartHref();
-  const address = contractAddress();
 
   return (
     <section
@@ -69,27 +64,9 @@ export function BuySteps() {
             </span>
             <h3>Swap carefully</h3>
             <p>
-              {buyHref ? (
-                <>
-                  Use the confirmed official swap link{" "}
-                  <a href={buyHref} target="_blank" rel="noopener noreferrer">
-                    {buyHref}
-                    <span className="sr-only"> (opens in a new tab)</span>
-                  </a>
-                  .
-                </>
-              ) : (
-                <>
-                  Use the confirmed official swap link. {siteConfig.messages.linkPending}
-                </>
-              )}{" "}
-              Check that the network is Ethereum and compare the contract with{" "}
-              {address ? (
-                <code>{address}</code>
-              ) : (
-                <>the contract address on this site. {siteConfig.messages.contractPending}</>
-              )}{" "}
-              Review the amount and fees before confirming.
+              Use the confirmed official swap link. Check that the network is
+              Ethereum and compare the contract with the contract address on
+              this site.
             </p>
           </li>
         </ol>
@@ -97,24 +74,15 @@ export function BuySteps() {
           <DestinationControl
             label="Open official buy link"
             href={buyHref}
-            pendingMessage={siteConfig.messages.linkPending}
-            showNote={!buyHref}
-            noteId="buy-step-note"
+            pendingMessage=""
           />
           <DestinationControl
             label="View chart"
             href={chart}
-            pendingMessage={siteConfig.messages.chartPending}
+            pendingMessage=""
             variant="secondary"
-            showNote={!chart}
-            noteId="chart-step-note"
           />
         </div>
-        <p className="safety-note">
-          Crypto assets are risky. A token can lose value or become difficult
-          to sell. Only proceed if you understand the transaction and can
-          afford the loss.
-        </p>
       </div>
     </section>
   );

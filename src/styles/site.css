@@ -391,6 +391,10 @@ code {
 
 .hero-text {
   max-width: 38rem;
+  padding: 0.75rem 0.95rem;
+  border-radius: 16px;
+  background: rgba(255, 245, 228, 0.9);
+  color: var(--ink);
   font-size: 1.15rem;
 }
 
@@ -787,9 +791,9 @@ code {
 }
 
 .footer-brand {
-  display: grid;
-  justify-items: start;
-  gap: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
 }
 
 .footer-brand img {
@@ -799,7 +803,54 @@ code {
 }
 
 .footer-name {
+  margin: 0;
   font-size: 1.6rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-left: auto;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.footer-social img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.contract-label {
+  margin: 0;
+  color: #efe6f8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contract-value {
+  margin: 0;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 650;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 .footer-tagline,
@@ -851,7 +902,9 @@ code {
   }
 
   .footer-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   .hero-copy {
@@ -883,6 +936,12 @@ code {
   .destination,
   .destination .btn {
     width: 100%;
+  }
+
+  .hero-actions,
+  .hero-actions .destination,
+  .hero-actions .btn {
+    width: auto;
   }
 }
 

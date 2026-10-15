@@ -4,9 +4,6 @@
  * pending states. Do not add guessed addresses, supply figures, or unofficial links.
  *
  * Still awaiting confirmation:
- * - contractAddress (shown as "Coming Soon.." until a real address is set)
- * - dexLink
- * - chartLink
  * - projectContact
  *
  * year is the publication year of this website (2026).
@@ -21,7 +18,7 @@ export const siteConfig = {
   ticker: "$BYEBUY",
   siteUrl: "https://byebuy.online",
   year: 2026,
-  contractAddress: "",
+  contractAddress: "0xf7e4c55282bd3138bd241a45cf05188388c780cc",
   contractPlaceholder: "Coming Soon..",
   totalSupply: "1,000,000,000",
   buySellTax: "0%",
@@ -30,8 +27,10 @@ export const siteConfig = {
   tokenomics: "",
   officialXUrl: "https://x.com/byebuy_byebuy",
   officialTelegramUrl: "https://t.me/byebuybye",
-  dexLink: "",
-  chartLink: "",
+  dexLink:
+    "https://app.uniswap.org/swap?chain=mainnet&use=v2&outputCurrency=0xf7e4c55282bd3138bd241a45cf05188388c780cc",
+  chartLink:
+    "https://www.dextools.io/app/ether/pair-explorer/0x0d0e5481550059b3509bb0b6b333815df7e6b0de",
   projectContact: "",
   messages: {
     linkPending: "Official link will be added after verification.",
